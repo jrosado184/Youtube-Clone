@@ -20,8 +20,11 @@ const Header = () => {
       <div className="display: flex w-4/12 h-10">
         {" "}
         {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
-        <input className="p-3 w-20 flex-1 border-2" placeholder="Search" />
-        <button className=" pl-1 border-slate-300 border bg-slate-50	">
+        <input
+          className="p-3 w-20 flex-1 border-2 shadow-inner"
+          placeholder="Search"
+        />
+        <button className=" pl-1 border-slate-300 border bg-slate-50 shadow-inner">
           {" "}
           <img
             className="object-contain ml-4 w-[25px] pr-2 mr-4 "
@@ -34,9 +37,9 @@ const Header = () => {
       <div className="display: flex items-center">
         {" "}
         {/* VIDEO, APPS AND USER CONTAINER */}
-        <img className="w-6 mr-4" src={camera} />
-        <img className="w-4 h-4 mr-4" src={apps} />
-        <img className="w-6 h-6 mr-4" src={bell} />
+        <img className="w-6 mr-5" src={camera} />
+        <img className="w-4 h-4 mr-5" src={apps} />
+        <img className="w-6 h-6 mr-5" src={bell} />
         <img className="w-8 h-28 mr-12" src={profile} />
       </div>
     </div>
