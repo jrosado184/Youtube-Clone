@@ -10,11 +10,11 @@ import profile from "../assets/profile.svg";
 
 const Header = () => {
   return (
-    <div className="display: flex items-center justify-between">
-      <div className="display: flex">
+    <div className="display: flex items-center justify-between sticky inset-0 z-100 bg-white">
+      <div className="display: flex items-center">
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
-        <img className="w-6 ml-6" src={menu} alt="menu" />
+        <img className="w-5 ml-6" src={menu} alt="menu" />
         <img className="w-24 ml-6 object-contain" src={youtube} alt="youtube" />
       </div>
       <div className="display: flex w-4/12 h-10">
