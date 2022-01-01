@@ -10,24 +10,24 @@ import profile from "../assets/profile.svg";
 
 const Header = () => {
   return (
-    <div className="display: flex items-center justify-between sticky inset-0 z-100 bg-white">
+    <div className="w-full h-16 display: flex items-center justify-between sticky inset-0 z-100 bg-white">
       <div className="display: flex items-center">
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
         <img className="w-5 ml-6" src={menu} alt="menu" />
         <img className="w-24 ml-6 object-contain" src={youtube} alt="youtube" />
       </div>
-      <div className="display: flex w-4/12 h-10">
+      <div className="display: flex w-4/12 h-10c   ">
         {" "}
         {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
         <input
-          className="p-3 w-20 flex-1 border-2 shadow-inner"
+          className="p-2 w-20 flex-1 border-2 shadow-inner"
           placeholder="Search"
         />
-        <button className=" pl-1 border-slate-300 border bg-slate-50 shadow-inner">
+        <button className=" pl-1 border-slate-300 border bg-slate-100 shadow-inner border-1 border-l-0">
           {" "}
           <img
-            className="object-contain ml-4 w-[25px] pr-2 mr-4 "
+            className="object-contain ml-4 w-[29px] pr-2 mr-4 "
             src={search}
             alt="search"
           />
