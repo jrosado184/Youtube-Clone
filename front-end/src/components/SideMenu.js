@@ -10,9 +10,9 @@ import liked from "../assets/liked.svg";
 
 const SideMenu = () => {
   return (
-    <div className=" h-screen ml-6 w-[13%] fixed">
+    <div className=" h-screen flex-1 ml-6 w-[20%]">
       <div className="display: flex justify-start my-8 ">
-        <img className="w-7" src={home} />
+        <img className="w-6" src={home} />
         <p className="ml-7">Home</p>
       </div>
       <div className="display: flex">
@@ -23,30 +23,30 @@ const SideMenu = () => {
         <p className="ml-7">Explore</p>
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={subscriptions} />
+        <img className="w-6" src={subscriptions} />
         <p className="ml-7">Subscriptions</p>
       </div>
       <div className="display: flex justify-start flex-col mr-2">
         <hr />
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={library} />
+        <img className="w-6" src={library} />
         <p className="ml-7">Library</p>
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={history} />
+        <img className="w-6" src={history} />
         <p className="ml-7">History</p>
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={videos} />
+        <img className="w-6" src={videos} />
         <p className="ml-7">Your videos</p>
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={clock} />
+        <img className="w-6" src={clock} />
         <p className="ml-7">Watch later</p>
       </div>
       <div className="display: flex justify-start my-8">
-        <img className="w-7" src={liked} />
+        <img className="w-6" src={liked} />
         <p className="ml-7">Watch later</p>
       </div>
       <div>

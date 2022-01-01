@@ -10,7 +10,7 @@ import profile from "../assets/profile.svg";
 
 const Header = () => {
   return (
-    <div className="w-full h-16 display: flex items-center justify-between sticky inset-y-0">
+    <div className="w-full h-16 display: flex items-center justify-between">
       <div className="display: flex items-center">
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
