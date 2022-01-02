@@ -15,7 +15,7 @@ const Header = () => {
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
         <img className="w-6 ml-7" src={menu} alt="menu" />
-        <img className="w-28 ml-8 object-contain" src={youtube} alt="youtube" />
+        <img className="w-20 ml-8 object-contain" src={youtube} alt="youtube" />
       </div>
       <div className="display: flex w-4/12 h-12    ">
         {" "}
@@ -37,9 +37,9 @@ const Header = () => {
       <div className="display: flex items-center">
         {" "}
         {/* VIDEO, APPS AND USER CONTAINER */}
-        <img className="w-7 mr-7" src={camera} />
-        <img className="w-5 h-5 mr-7" src={apps} />
-        <img className="w-8 h-8 mr-7" src={bell} />
+        <img className="w-5 mr-5" src={camera} />
+        <img className="w-4 h-4 mr-7" src={apps} />
+        <img className="w-6 h-8 mr-7" src={bell} />
         <img className="w-10 h-28 mr-12" src={profile} />
       </div>
     </div>
