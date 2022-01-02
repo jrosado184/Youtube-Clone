@@ -48,7 +48,7 @@ const SideMenu = () => {
       </div>
       <div className="display: flex justify-start my-4">
         <img className="w-5" src={liked} alt="" />
-        <p className="ml-7">Watch later</p>
+        <p className="ml-7">Liked videos</p>
       </div>
       <div>
         <hr />

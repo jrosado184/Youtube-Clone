@@ -6,7 +6,7 @@ const Categories = () => {
     <div className="w-[94%] scrollbar-thin overflow-x-auto">
       <div className=" w-[100%] h-100">
         <div className="w-[100%] display: flex justify-end">
-          <hr className="w-[100%] shadow" />
+          <hr className="w-[98%] shadow" />
         </div>
         <div className="display: flex justify-end">
           <div className="w-[100%] h-14 display: flex justify-end">
@@ -76,7 +76,7 @@ const Categories = () => {
         </div>
       </div>
       <div className="w-full display: flex justify-end">
-        <hr className="w-[100%]" />
+        <hr className="w-[98%]" />
       </div>
     </div>
   );

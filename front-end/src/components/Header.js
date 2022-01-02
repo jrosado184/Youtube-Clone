@@ -17,14 +17,14 @@ const Header = () => {
         <img className="w-6 ml-7" src={menu} alt="menu" />
         <img className="w-20 ml-8 object-contain" src={youtube} alt="youtube" />
       </div>
-      <div className="display: flex w-4/12 h-12    ">
+      <div className="display: flex w-[35%] h-[65%] ">
         {" "}
         {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
         <input
-          className="p-2 w-20 flex-1 border-2 border-gray-300 shadow-md"
+          className="p-2 w-20 flex-1 border-2 border-gray-300 shadow-sm"
           placeholder="Search"
         />
-        <button className=" pl-1 border-slate-300 border bg-slate-100 shadow-md border-gray-300 border-1 border-l-0">
+        <button className=" pl-1 border-slate-300 border bg-slate-100 shadow-sm border-gray-300 border-1 border-l-0">
           {" "}
           <img
             className="object-contain ml-4 w-[29px] pr-2 mr-4 "
