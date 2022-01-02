@@ -10,50 +10,51 @@ import liked from "../assets/liked.svg";
 
 const SideMenu = () => {
   return (
-    <div className="ml-6 w-[20%]">
-      <div className="display: flex justify-start my-8 ">
-        <img className="w-6" src={home} />
+    <div className="ml-8 h-screen mb-6 w-full">
+      <div className="display: flex justify-start items-center my-5">
+        <img className="w-5" src={home} />
         <p className="ml-7">Home</p>
       </div>
-      <div className="display: flex">
+      <div className="display: flex items-center my-4">
         <img
-          className="w-6 rounded-3xl border-2 border-gray-700"
+          className="w-5 h-5 rounded-3xl border-2 border-gray-700"
           src={explore}
+          alt=""
         />
         <p className="ml-7">Explore</p>
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={subscriptions} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5" src={subscriptions} alt="" />
         <p className="ml-7">Subscriptions</p>
       </div>
       <div className="display: flex justify-start flex-col mr-2">
         <hr />
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={library} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5" src={library} alt="" />
         <p className="ml-7">Library</p>
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={history} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5 h-5" src={history} alt="" />
         <p className="ml-7">History</p>
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={videos} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5" src={videos} alt="" />
         <p className="ml-7">Your videos</p>
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={clock} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5" src={clock} alt="" />
         <p className="ml-7">Watch later</p>
       </div>
-      <div className="display: flex justify-start my-8">
-        <img className="w-6" src={liked} />
+      <div className="display: flex justify-start my-4">
+        <img className="w-5" src={liked} alt="" />
         <p className="ml-7">Watch later</p>
       </div>
       <div>
         <hr />
       </div>
-      <div className="my-5">
-        <h1 className="font-semibold">SUBSCRIPTIONS</h1>
+      <div>
+        <h1 className="font-semibold my-3">SUBSCRIPTIONS</h1>
       </div>
     </div>
   );
