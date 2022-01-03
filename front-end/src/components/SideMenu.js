@@ -10,7 +10,7 @@ import liked from "../assets/liked.svg";
 
 const SideMenu = () => {
   return (
-    <div className="ml-8 h-screen mb-6 w-full">
+    <div className="w-[30%] h-screen mb-6 w-full pl-6">
       <div className="display: flex justify-start items-center my-5">
         <img className="w-5" src={home} />
         <p className="ml-7">Home</p>

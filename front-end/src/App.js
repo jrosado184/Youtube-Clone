@@ -12,7 +12,9 @@ const App = () => {
         <SideMenu />
         <div className="w-[90%]">
           <Categories />
-          <Recommended />
+          <div>
+            <Recommended />
+          </div>
         </div>
       </div>
     </div>

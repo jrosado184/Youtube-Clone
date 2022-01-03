@@ -3,7 +3,7 @@ import right from "../assets/right.svg";
 
 const Categories = () => {
   return (
-    <div className="w-[94%] scrollbar-thin overflow-x-auto">
+    <div className="w-[100%] scrollbar-thin overflow-x-scroll sticky inset-16 bg-white">
       <div className=" w-[100%] h-100">
         <div className="w-[100%] display: flex justify-end">
           <hr className="w-[98%] shadow" />

@@ -2,19 +2,25 @@ import React from "react";
 
 const Recommended = () => {
   return (
-    <div className="display: flex flex-wrap ml-32">
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
-      <div className="w-[350px] h-72 border-2 border-gray-500 m-3"></div>
+    <div className="display: flex justify-center">
+      <div className="w-[88%] display: flex flex-wrap">
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+        <div className="w-[24%] h-60 border-2 border-gray-500 my-4 ml-[1%]"></div>
+      </div>
     </div>
   );
 };

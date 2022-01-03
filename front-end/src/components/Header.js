@@ -10,7 +10,7 @@ import profile from "../assets/profile.svg";
 
 const Header = () => {
   return (
-    <div className="w-full h-16 display: flex items-center justify-between">
+    <div className="w-full h-16 display: flex items-center justify-between sticky inset-0 bg-white">
       <div className="display: flex items-center">
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
@@ -24,7 +24,7 @@ const Header = () => {
           className="p-2 w-20 flex-1 border-2 border-gray-300 shadow-sm"
           placeholder="Search"
         />
-        <button className=" pl-1 border-slate-300 border bg-slate-100 shadow-sm border-gray-300 border-1 border-l-0">
+        <button className=" pl-1 border-slate-300 border bg-slate-100 shadow- border-gray-300 border-1 border-l-0">
           {" "}
           <img
             className="object-contain ml-4 w-[29px] pr-2 mr-4 "
