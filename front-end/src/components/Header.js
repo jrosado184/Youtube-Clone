@@ -15,7 +15,7 @@ const Header = () => {
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
         <img className="w-6 ml-7" src={menu} alt="menu" />
-        <img className="w-20 ml-8 object-contain" src={youtube} alt="youtube" />
+        <img className="w-24 ml-8 object-contain" src={youtube} alt="youtube" />
       </div>
       <div className="display: flex w-[35%] h-[65%] ">
         {" "}

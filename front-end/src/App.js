@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <div className="display: flex">
         <SideMenu />
-        <div className="w-[90%]">
+        <div className="w-[80%] flex-1">
           <Categories />
           <div>
             <Recommended />
