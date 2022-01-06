@@ -1,4 +1,4 @@
-import { FETCH_VIDEOS, LOADING, loading } from "../actions";
+import { FETCH_VIDEOS, LOADING } from "../actions";
 
 export const initialState = {
   isLoading: false,

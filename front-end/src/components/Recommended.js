@@ -1,22 +1,18 @@
 import React, { useEffect } from "react";
-import { API_KEY, VIDEOS } from "../api/api";
-import axios from "axios";
-import { fetchVideos, getVideos } from "../actions";
-import Recommended from "./Recommended";
+import { getVideos } from "../actions";
 import { connect } from "react-redux";
 
 const RecommendedList = ({ fetchVideos, dispatch }) => {
   useEffect(() => {
     dispatch(getVideos());
-    console.log(fetchVideos);
   }, []);
 
   return (
-    <div className="w-[88%] display: flex flex-wrap ml-20">
+    <div className="w-[87%] h-2 display: flex flex-wrap justify-center my-32 ml-[13%] gap-y-32">
       {fetchVideos.map((videos) => (
-        <div key={videos.id} className="w-[24%] h-56 my-4 m-[.5%] my-20">
+        <div key={videos.id} className="w-[21%] h-56 m-[.5%]">
           <img
-            className="w-full h-full"
+            className="w-full h-full "
             src={videos.snippet.thumbnails.high.url}
           />
           <div className="w-[100%] h-[40%] py-[2.5%] flex">

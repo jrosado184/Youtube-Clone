@@ -8,9 +8,9 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className="display: flex">
+      <div className="">
         <SideMenu />
-        <div className="w-[80%] flex-1">
+        <div className="w-[100%] flex-1">
           <Categories />
           <div>
             <Recommended />

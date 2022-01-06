@@ -10,7 +10,7 @@ import liked from "../assets/liked.svg";
 
 const SideMenu = () => {
   return (
-    <div className="h-screen w-[12%] leading-none my-4 ">
+    <div className="h-screen w-[12%] leading-none my-4 fixed left-0 top-12 bg-white py-4">
       {/*HOME ICON DIV*/}
       <div className="display: flex justify-start items-center bg-gray-200 h-10">
         <img className="w-5 ml-6" src={home} />
@@ -31,7 +31,7 @@ const SideMenu = () => {
         <p className="ml-7">Subscriptions</p>
       </div>
       {/*LINE*/}
-      <div className="display: flex justify-start flex-col mr-2">
+      <div className="display: flex justify-start flex-col mr-2 sticky inset-40">
         <hr />
       </div>
       {/*LIBRARY ICON DIV*/}

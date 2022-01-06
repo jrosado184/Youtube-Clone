@@ -3,8 +3,8 @@ import right from "../assets/right.svg";
 
 const Categories = () => {
   return (
-    <div className="scrollbar-thin sticky inset-16 bg-white">
-      <div className=" w-[100%] h-100">
+    <div className="scrollbar-hide bg-white fixed top-16 ml-[12%]">
+      <div className=" w-[90.5%] h-100">
         {/*TOP LINE*/}
         <div className="w-[100%] display: flex justify-end">
           <hr className="w-[98%] shadow" />
