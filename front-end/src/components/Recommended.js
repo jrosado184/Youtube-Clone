@@ -1,32 +1,39 @@
 import React, { useEffect } from "react";
-import { getVideos } from "../actions";
+import { fetchChannels } from "../actions";
 import { connect } from "react-redux";
+import { CHANNELS, API_KEY, URL } from "../api/api";
+import axios from "axios";
 
-const RecommendedList = ({ fetchVideos, dispatch }) => {
+const Recommended = ({ video, dispatch, channels }) => {
+  const getChannels = () => {
+    return (dispatch) => {
+      axios
+        .get(`${URL}${CHANNELS}${video.snippet.channelId}${API_KEY}`)
+        .then((res) => {
+          dispatch(fetchChannels(res.data.items));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+  };
+
   useEffect(() => {
-    dispatch(getVideos());
-  }, []);
+    dispatch(getChannels());
+  }, [channels]);
 
   return (
-    <div className="w-[87%] h-2 display: flex flex-wrap justify-center my-32 ml-[13%] gap-y-32">
-      {fetchVideos.map((videos) => (
-        <div key={videos.id} className="w-[21%] h-56 m-[.5%]">
-          <img
-            className="w-full h-full "
-            src={videos.snippet.thumbnails.high.url}
-          />
-          <div className="w-[100%] h-[40%] py-[2.5%] flex">
-            <div className="w-10 h-9 border-2 border-gray-500 rounded-full"></div>
-            <div className="w-full h-8 ml-2">
-              <h1 className="text-lg font-semibold">{videos.snippet.title}</h1>
-              <p className="text-sm leading-5">{videos.snippet.channelTitle}</p>
-              <p className="leading-5 text-sm">
-                {videos.statistics.viewCount} views
-              </p>
-            </div>
-          </div>
+    <div className="w-[21%] h-56 m-[.5%]">
+      <img className="w-full h-full " src={video.snippet.thumbnails.high.url} />
+      <div className="w-[100%] h-[40%] py-[2.5%] flex">
+        <div className="w-full h-8 ml-2">
+          <h1 className="text-lg font-semibold">{video.snippet.title}</h1>
+          <p className="text-md leading-5">{video.snippet.channelTitle}</p>
+          <p className="leading-6 text-md">
+            {video.statistics.viewCount} views
+          </p>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
@@ -34,7 +41,7 @@ const RecommendedList = ({ fetchVideos, dispatch }) => {
 const mapStateToProps = (state) => {
   return {
     isLoading: state.isLoading,
-    fetchVideos: state.fetchVideos,
+    channels: state.channels,
   };
 };
-export default connect(mapStateToProps)(RecommendedList);
+export default connect(mapStateToProps)(Recommended);

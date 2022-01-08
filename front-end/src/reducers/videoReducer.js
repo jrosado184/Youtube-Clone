@@ -1,8 +1,9 @@
-import { FETCH_VIDEOS, LOADING } from "../actions";
+import { FETCH_VIDEOS, FETCH_CHANNELS, LOADING } from "../actions";
 
 export const initialState = {
-  isLoading: false,
-  fetchVideos: [],
+  loading: false,
+  videos: [],
+  channels: [],
   errors: "",
 };
 
@@ -10,11 +11,17 @@ export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOADING:
       return {
-        isLoading: true,
+        loading: true,
       };
     case FETCH_VIDEOS:
       return {
-        fetchVideos: action.payload,
+        ...state,
+        videos: action.payload,
+      };
+    case FETCH_CHANNELS:
+      return {
+        ...state,
+        channels: action.payload,
       };
     default:
       return state;

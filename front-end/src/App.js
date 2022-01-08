@@ -2,7 +2,7 @@ import "./App.css";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
-import Recommended from "./components/Recommended";
+import RecommendedList from "./components/RecommendedList";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <div className="w-[100%] flex-1">
           <Categories />
           <div>
-            <Recommended />
+            <RecommendedList />
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { VIDEOS, API_KEY } from "../api/api";
+import { VIDEOS, CHANNELS, API_KEY, URL } from "../api/api";
 import axios from "axios";
 
 export const LOADING = "LOADING";
@@ -13,10 +13,17 @@ export const fetchVideos = (videos) => {
   return { type: FETCH_VIDEOS, payload: videos };
 };
 
+export const FETCH_CHANNELS = "FETCH_CHANNELS";
+
+export const fetchChannels = (channel) => {
+  return { type: FETCH_CHANNELS, payload: channel };
+};
+
 export const getVideos = () => {
   return (dispatch) => {
+    dispatch(loading);
     axios
-      .get(`${VIDEOS}${API_KEY}`)
+      .get(`${URL}${VIDEOS}${API_KEY}`)
       .then((res) => {
         dispatch(fetchVideos(res.data.items));
       })

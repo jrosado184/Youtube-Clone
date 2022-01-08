@@ -1,6 +1,8 @@
-export const API_KEY = "AIzaSyDw4GyqGcZMC3mGK48M3QkmbEFe7WGcDow";
+export const API_KEY = "&key=AIzaSyDw4GyqGcZMC3mGK48M3QkmbEFe7WGcDow";
+
+export const URL = "https://www.googleapis.com/youtube/v3/";
 
 export const VIDEOS =
-  "https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&maxResults=50&chart=mostPopular&key=";
+  "videos?part=snippet,contentDetails,statistics&maxResults=50&chart=mostPopular";
 
-export const CHANNELS = "https://www.googleapis.com/youtube/v3/channels?key=";
+export const CHANNELS = "channels?part=snippet&id=";
