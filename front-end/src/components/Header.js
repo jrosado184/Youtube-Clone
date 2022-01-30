@@ -7,6 +7,7 @@ import camera from "../assets/camera.svg";
 import apps from "../assets/apps.png";
 import bell from "../assets/bell.svg";
 import profile from "../assets/profile.svg";
+import searchIcon from "../assets/searchIcon.svg";
 
 const Header = () => {
   return (
@@ -14,10 +15,14 @@ const Header = () => {
       <div className="display: flex items-center">
         {" "}
         {/* YOUTUBE LOGO AND MENU CONTAINER */}
-        <img className="w-6 ml-7" src={menu} alt="menu" />
-        <img className="w-24 ml-8 object-contain" src={youtube} alt="youtube" />
+        <img className="sm:hidden lg:flex w-6 ml-7" src={menu} alt="menu" />
+        <img
+          className="sm:ml-6 w-24 object-contain lg:w-24 ml-12 object-contain"
+          src={youtube}
+          alt="youtube"
+        />
       </div>
-      <div className="display: flex w-[35%] h-[65%] ">
+      <div className="md2:flex w-[35%] h-[65%] sm:hidden">
         {" "}
         {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
         <input
@@ -37,10 +42,11 @@ const Header = () => {
       <div className="display: flex items-center">
         {" "}
         {/* VIDEO, APPS AND USER CONTAINER */}
-        <img className="w-5 mr-5" src={camera} />
-        <img className="w-4 h-4 mr-7" src={apps} />
-        <img className="w-6 h-8 mr-7" src={bell} />
-        <img className="w-10 h-28 mr-12" src={profile} />
+        <img className="md2:flex w-5 mr-5 sm:hidden" src={camera} />
+        <img className="md2:flex w-4 h-4 mr-7 sm:hidden" src={apps} />
+        <img className="w-6 h-8 mr-2" src={bell} />
+        <img className="md:w-6 mr-2 md2:hidden" src={searchIcon} />
+        <img className="w-10 h-28 mr-6" src={profile} />
       </div>
     </div>
   );

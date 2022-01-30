@@ -9,7 +9,7 @@ const RecommendedList = ({ dispatch, videos, loading }) => {
   }, []);
 
   return (
-    <div className="w-[87%] h-2 display: flex flex-wrap justify-center my-32 sm:ml-[6%] md:ml-[10%] lg:ml-[13%] gap-y-32">
+    <div className="w-[87%] h-2 display: flex flex-wrap justify-center my-32 sm:ml-[6%] md:ml-[12%] md3:ml-[8%] md4:ml-[8%] lg:ml-[13%] gap-y-32">
       {videos.map((video) => (
         <Recommended key={video.id} video={video} />
       ))}

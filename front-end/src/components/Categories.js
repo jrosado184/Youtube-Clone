@@ -95,7 +95,7 @@ const Categories = () => {
             </div>
           </div>
           {/* RIGHT ARROW DIV*/}
-          <div className="display: flex ml-12">
+          <div className="display: flex mr-2">
             <img className="w-6" src={right} />
           </div>
         </div>

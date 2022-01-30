@@ -10,14 +10,14 @@ import liked from "../assets/liked.svg";
 
 const SideMenu = () => {
   return (
-    <div className="h-screen leading-none my-4 fixed left-0 top-12 bg-white">
+    <div className="w-100 h-screen leading-none my-4 fixed left-0 top-12 bg-white">
       {/*HOME ICON DIV*/}
       <div className=" sm:bg-white lg:bg-gray-200 display: flex justify-start items-center bg-gray-200 h-10 my-3">
         <img className="w-5 ml-6" src={home} />
         <p className="sm:hidden lg:inline ml-8">Home</p>
       </div>
       {/*EXPLORE ICON DIV*/}
-      <div className="display: flex items-center h-10 hover:bg-gray-100">
+      <div className="lg:display: flex items-center h-10 hover:bg-gray-100 md:my-6">
         <img
           className="w-6 h-6 rounded-3xl border-2 border-gray-700 ml-6"
           src={explore}

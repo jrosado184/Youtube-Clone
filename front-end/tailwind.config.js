@@ -6,6 +6,7 @@ module.exports = {
       md: "500px",
       md2: "700px",
       md3: "820px",
+      md4: "1000px",
       lg: "1359px",
     },
     extend: {},
