@@ -22,9 +22,11 @@ const Recommended = ({ video, dispatch, channels }) => {
     dispatch(getChannels());
   }, []);
 
+  const views = video.snippet.thumbnails.high.url;
+
   return (
     <div className="sm:w-[32.2%] md:w-[90%] md4:w-[32%] h-80 md2:w-[46%] h-72 lg:w-[21%] h-56 m-[.5%]">
-      <img className="w-full h-full " src={video.snippet.thumbnails.high.url} />
+      <img className="w-full h-full " src={views} />
       <div className="w-[100%] h-[40%] py-[2.5%] flex">
         <div className="w-full h-8 ml-2">
           <h1 className="text-lg font-semibold">{video.snippet.title}</h1>
