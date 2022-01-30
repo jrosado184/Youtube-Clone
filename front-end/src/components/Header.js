@@ -22,7 +22,7 @@ const Header = () => {
           alt="youtube"
         />
       </div>
-      <div className="md2:flex w-[35%] h-[65%] sm:hidden">
+      <div className="sm:hidden md2:flex w-[45%] h-[65%]  lg: flex w-[33%]">
         {" "}
         {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
         <input
@@ -42,9 +42,9 @@ const Header = () => {
       <div className="display: flex items-center">
         {" "}
         {/* VIDEO, APPS AND USER CONTAINER */}
-        <img className="md2:flex w-5 mr-5 sm:hidden" src={camera} />
-        <img className="md2:flex w-4 h-4 mr-7 sm:hidden" src={apps} />
-        <img className="w-6 h-8 mr-2" src={bell} />
+        <img className="md2:flex w-5 mr-6 sm:hidden" src={camera} />
+        <img className="md2:flex w-4 h-4 mr-4 sm:hidden" src={apps} />
+        <img className="lg:w-6 h-8 mr-2" src={bell} />
         <img className="md:w-6 mr-2 md2:hidden" src={searchIcon} />
         <img className="w-10 h-28 mr-6" src={profile} />
       </div>
