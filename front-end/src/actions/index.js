@@ -1,4 +1,4 @@
-import { VIDEOS, CHANNELS, API_KEY, URL } from "../api/api";
+import { VIDEOS, API_KEY, URL } from "../api/api";
 import axios from "axios";
 
 export const LOADING = "LOADING";

@@ -20,10 +20,10 @@ const Recommended = ({ video, dispatch, channels }) => {
 
   useEffect(() => {
     dispatch(getChannels());
-  }, [channels]);
+  }, []);
 
   return (
-    <div className="w-[21%] h-56 m-[.5%]">
+    <div className="sm:w-[32.2%] md:w-[90%] h-full md2:w-[46%] h-72 lg:w-[21%] h-56 m-[.5%]">
       <img className="w-full h-full " src={video.snippet.thumbnails.high.url} />
       <div className="w-[100%] h-[40%] py-[2.5%] flex">
         <div className="w-full h-8 ml-2">
@@ -40,7 +40,7 @@ const Recommended = ({ video, dispatch, channels }) => {
 
 const mapStateToProps = (state) => {
   return {
-    isLoading: state.isLoading,
+    loading: state.loading,
     channels: state.channels,
   };
 };
