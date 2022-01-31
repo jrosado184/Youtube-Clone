@@ -30,7 +30,9 @@ const Recommended = ({ video, dispatch, channels }) => {
       <img className="w-full h-full " src={video.snippet.thumbnails.high.url} />
       <div className="w-[100%] h-[40%] py-[2.5%] flex">
         <div className="w-full h-8 ml-2">
-          <h1 className="text-lg font-semibold">{video.snippet.title}</h1>
+          <h1 className="text-lg font-semibold line-clamp-2 ...">
+            {video.snippet.title}
+          </h1>
           <p className="text-md leading-5">{video.snippet.channelTitle}</p>
           <p className="leading-6 text-md">
             {numeral(views).format("a")} views
