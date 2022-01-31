@@ -13,11 +13,11 @@ const Categories = () => {
           <div className="w-[100%] h-14 display: flex scrollbar-thin">
             <div className="w-[100%] display: flex">
               {/* ALL DIV*/}
-              <div className="w-fit p-4 h-8 bg-gray-100 border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
+              <div className="w-fit p-4 h-8 bg-black text-white border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
                 <h1 className="text-md">All</h1>
               </div>
               {/* GAMING DIV*/}
-              <div className="w-fit p-4 h-8 bg-gray-100 border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
+              <div className="w-fit p-4 h-8 border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
                 <h1 className="text-md">Gaming</h1>
               </div>
               {/* LIVE DIV*/}
