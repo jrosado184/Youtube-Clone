@@ -14,7 +14,6 @@ const Header = () => {
     <div className="w-full h-16 display: flex items-center justify-between fixed top-0 bg-white">
       <div className="display: flex items-center">
         {" "}
-        {/* YOUTUBE LOGO AND MENU CONTAINER */}
         <img className="sm:hidden lg:flex w-6 ml-7" src={menu} alt="menu" />
         <img
           className="sm:ml-6 w-24 object-contain lg:w-24 ml-12 object-contain"
@@ -22,9 +21,8 @@ const Header = () => {
           alt="youtube"
         />
       </div>
-      <div className="sm:hidden md2:flex w-[45%] h-[65%]  lg: flex w-[33%]">
+      <div className="md:hidden md2:flex flex-shrink w-[50%] lg:w-[33%]">
         {" "}
-        {/* SEARCH BAR AND VOICE LOGO CONTAINER */}
         <input
           className="p-2 w-20 flex-1 border-2 border-gray-300 shadow-sm"
           placeholder="Search"
@@ -41,7 +39,6 @@ const Header = () => {
       </div>
       <div className="display: flex items-center">
         {" "}
-        {/* VIDEO, APPS AND USER CONTAINER */}
         <img className="md2:flex w-5 mr-6 sm:hidden" src={camera} />
         <img className="md2:flex w-4 h-4 mr-4 sm:hidden" src={apps} />
         <img className="lg:w-6 h-8 mr-2" src={bell} />
