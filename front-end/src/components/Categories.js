@@ -3,14 +3,14 @@ import right from "../assets/right.svg";
 
 const Categories = () => {
   return (
-    <div className="lg:ml-[12%] scrollbar-hide bg-white fixed top-16 sm:ml-12">
+    <div className="lg:ml-[12%] bg-white fixed top-16 sm:ml-12">
       <div className=" w-[90.5%] h-100">
         {/*TOP LINE*/}
         <div className="w-[100%] display: flex justify-end">
           <hr className="w-[98%] shadow" />
         </div>
-        <div className="display: flex justify-start ml-10">
-          <div className="w-[100%] h-14 display: flex scrollbar-thin">
+        <div className="display: flex justify-start ml-10 w-[89.5%]">
+          <div className="w-[100%] h-14 display: flex scrollbar-thin overflow-x-auto">
             <div className="w-[100%] display: flex">
               {/* ALL DIV*/}
               <div className="w-fit p-4 h-8 bg-black text-white border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
@@ -95,7 +95,7 @@ const Categories = () => {
             </div>
           </div>
           {/* RIGHT ARROW DIV*/}
-          <div className="display: flex mr-2">
+          <div className="display: flex">
             <img className="w-6" src={right} />
           </div>
         </div>

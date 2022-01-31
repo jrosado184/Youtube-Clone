@@ -15,10 +15,21 @@ import biaheza from "../assets/biaheza.jpg";
 import web from "../assets/web.jpg";
 import pedro from "../assets/pedro.jpg";
 import cody from "../assets/cody.jpg";
+import premium from "../assets/youtube-premium.svg";
+import movies from "../assets/m&s.svg";
+import gaming from "../assets/gaming.svg";
+import live from "../assets/live.svg";
+import fashion from "../assets/fashion.svg";
+import learning from "../assets/learning.svg";
+import sports from "../assets/sports.svg";
+import settings from "../assets/settings.svg";
+import flag from "../assets/flag.svg";
+import help from "../assets/help.svg";
+import feedback from "../assets/feedback.svg";
 
 const SideMenu = () => {
   return (
-    <div className="md:w-12 lg:w-56 h-screen leading-none my-4 fixed left-0 top-12 bg-white">
+    <div className="md:w-12 lg:w-56 h-[90%] leading-none my-4 fixed left-0 top-12 bg-white scrollbar-thin overflow-hidden">
       {/*HOME ICON DIV*/}
       <div className=" sm:bg-white lg:bg-gray-200 display: flex justify-start items-center bg-gray-200 h-10 my-3">
         <img className="w-5 ml-6" src={home} />
@@ -73,7 +84,7 @@ const SideMenu = () => {
       </div>
       {/* SUBSCRIPTIONS DIV*/}
       <div>
-        <h1 className="font-semibold ml-4 sm:hidden lg:flex my-4">
+        <h1 className="text-gray-500 font-semibold ml-4 sm:hidden lg:flex my-4">
           SUBSCRIPTIONS
         </h1>
       </div>
@@ -101,13 +112,62 @@ const SideMenu = () => {
         <img className="w-6 ml-5 rounded-full" src={pedro} />
         <p className="ml-4">PedroTech</p>
       </div>
-      <div className="md:hidden lg:flex items-center">
+      <div className="md:hidden lg:flex items-center my-4">
         <img className="w-6 ml-5 rounded-full" src={cody} />
         <p className="ml-4">Cody Engel</p>
       </div>
       <div className="md:hidden lg:flex items-center my-4">
         <img className="w-6 ml-5 rounded-full" src={downArrow} />
         <p className="ml-4 text-sm">Show 135 more </p>
+      </div>
+      <hr className="sm:hidden lg:flex" />
+      <h1 className="text-gray-500 font-semibold ml-4 sm:hidden lg:flex my-4">
+        MORE FROM YOUTUBE
+      </h1>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={premium} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Youtube Premium</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={movies} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Movies & Shows</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={gaming} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Gaming</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={live} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Live</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={fashion} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Fashion & Beauty</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={learning} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Learning</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={sports} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Sports</p>
+      </div>
+      <hr className="sm:hidden lg:flex" />
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={settings} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Settings</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={flag} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Report History</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={help} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Help</p>
+      </div>
+      <div className="display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center">
+        <img className="w-6 ml-6" src={feedback} alt="" />
+        <p className="sm:hidden lg:inline ml-5">Feedback</p>
       </div>
     </div>
   );
