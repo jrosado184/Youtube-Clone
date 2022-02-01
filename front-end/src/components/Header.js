@@ -21,7 +21,7 @@ const Header = () => {
           alt="youtube"
         />
       </div>
-      <div className="md:hidden md2:flex flex-shrink w-[50%] lg:w-[33%]">
+      <div className="md:hidden md2:flex flex-shrink w-[47%] lg:w-[30%]">
         {" "}
         <input
           className="p-2 w-20 flex-1 border-2 border-gray-300 shadow-sm"
