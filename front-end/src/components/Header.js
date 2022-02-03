@@ -6,7 +6,7 @@ import microphone from "../assets/microphone.svg";
 import camera from "../assets/camera.svg";
 import apps from "../assets/apps.png";
 import bell from "../assets/bell.svg";
-import profile from "../assets/profile.svg";
+import me from "../assets/me.png";
 import searchIcon from "../assets/searchIcon.svg";
 
 const Header = () => {
@@ -43,7 +43,7 @@ const Header = () => {
         <img className="md2:flex w-4 h-4 mr-4 sm:hidden" src={apps} />
         <img className="lg:w-6 h-8 mr-2" src={bell} />
         <img className="md:w-6 mr-2 md2:hidden" src={searchIcon} />
-        <img className="w-10 h-28 mr-6" src={profile} />
+        <img className="w-10 h-10 mr-6" src={me} />
       </div>
     </div>
   );
