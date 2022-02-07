@@ -1,13 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import right from "../assets/right.svg";
 
 const Categories = () => {
-  const ref = useRef(null);
-
-  const scroll = (scrollOffset) => {
-    ref.current.scrollLeft += scrollOffset;
-  };
-
   return (
     <div className="lg:ml-[12%] bg-white fixed top-16 sm:ml-12">
       <div className=" w-[90.5%] h-100">
@@ -96,9 +90,7 @@ const Categories = () => {
               </div>
               {/* BACKEND DIV*/}
               <div className="w-fit p-4 h-8 bg-gray-100 border border-zinc-300 rounded-full display: flex justify-center items-center my-3 ml-3">
-                <h1 onClick={() => scroll(-200)} className="text-md">
-                  Backend
-                </h1>
+                <h1 className="text-md">Backend</h1>
               </div>
             </div>
           </div>
