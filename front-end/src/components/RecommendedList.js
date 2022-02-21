@@ -3,7 +3,7 @@ import { getVideos } from "../actions";
 import Recommended from "./Recommended";
 import { connect } from "react-redux";
 
-const RecommendedList = ({ dispatch, videos, loading }) => {
+const RecommendedList = ({ dispatch, videos }) => {
   useEffect(() => {
     dispatch(getVideos());
   }, []);
