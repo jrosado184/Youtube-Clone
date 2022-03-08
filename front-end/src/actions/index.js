@@ -23,7 +23,7 @@ export const getVideos = () => {
   return (dispatch) => {
     dispatch(loading);
     axios
-      .get(`${URL}${VIDEOS}${process.env.REACT_API_KEY}`)
+      .get(`${URL}${VIDEOS}${process.env.REACT_APP_API_KEY}`)
       .then((res) => {
         dispatch(fetchVideos(res.data.items));
       })
