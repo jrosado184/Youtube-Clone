@@ -1,4 +1,4 @@
-import { VIDEOS, API_KEY, URL } from "../api/api";
+import { VIDEOS, URL } from "../api/api";
 import axios from "axios";
 
 export const LOADING = "LOADING";
@@ -23,7 +23,7 @@ export const getVideos = () => {
   return (dispatch) => {
     dispatch(loading);
     axios
-      .get(`${URL}${VIDEOS}${API_KEY}`)
+      .get(`${URL}${VIDEOS}${process.env.REACT_API_KEY}`)
       .then((res) => {
         dispatch(fetchVideos(res.data.items));
       })

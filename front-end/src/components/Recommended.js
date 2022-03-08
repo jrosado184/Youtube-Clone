@@ -9,7 +9,9 @@ const Recommended = ({ video, dispatch, channels }) => {
   const getChannels = () => {
     return (dispatch) => {
       axios
-        .get(`${URL}${CHANNELS}${video.snippet.channelId}${API_KEY}`)
+        .get(
+          `${URL}${CHANNELS}${video.snippet.channelId}${process.env.REACT_API_KEY}`
+        )
         .then((res) => {
           dispatch(fetchChannels(res.data.items));
         })
@@ -35,7 +37,7 @@ const Recommended = ({ video, dispatch, channels }) => {
       <div className="w-[100%] h-[40%] py-[2.5%] flex">
         <div className="w-9 h-8 border-black border 2 rounded-full">
           <img
-            className="w-full h-full rounded-full "
+            className="w-full h-full rounded-full"
             src={video.snippet.thumbnails.high.url}
             alt=""
           />
