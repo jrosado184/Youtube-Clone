@@ -3,8 +3,8 @@ import right from "../assets/right.svg";
 
 const Categories = () => {
   return (
-    <div className="lg:ml-[12%] bg-white fixed top-16 sm:ml-12">
-      <div className=" w-[90.5%] h-100">
+    <div className="lg:ml-[12%] bg-white fixed top-16 pb-4 sm:ml-12">
+      <div className=" w-[90.5%] bg-white h-100">
         {/*TOP LINE*/}
         <div className="w-[100%] display: flex justify-end">
           <hr className="w-[98%] shadow" />

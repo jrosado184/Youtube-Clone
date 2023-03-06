@@ -23,7 +23,8 @@ export const getVideos = () => {
   return (dispatch) => {
     dispatch(loading);
     axios
-      .get(`${URL}${VIDEOS}${process.env.REACT_APP_API_KEY}`)
+      .get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&key=AIzaSyAikmnFoSaBeZHCvf6Bi0aa_XQnt0D_CTM
+`)
       .then((res) => {
         dispatch(fetchVideos(res.data.items));
       })
