@@ -9,6 +9,11 @@ module.exports = {
       md4: "1000px",
       lg: "1359px",
     },
+    fontSize: {
+      xm: "0.70em",
+      sm: "0.75em",
+      md: "0.9em",
+    },
     extend: {},
   },
   plugins: [
