@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
-import { fetchChannels } from "../actions";
+import React from "react";
 import { connect } from "react-redux";
-import { CHANNELS, URL } from "../api/api";
-import axios from "axios";
 import numeral from "numeral";
 import moment from "moment";
 
 const Recommended = ({ info }) => {
   let views = info?.video?.statistics?.viewCount;
-
-  console.log(info);
 
   return (
     <div className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[21%] m-[.5%]'>
