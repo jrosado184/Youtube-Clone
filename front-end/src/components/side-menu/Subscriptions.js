@@ -10,7 +10,7 @@ import cody from "../../assets/cody.jpg";
 
 const Subscriptions = () => {
   return (
-    <div>
+    <>
       <div>
         <h1 className='text-gray-500 font-semibold ml-4 sm:hidden lg:flex my-4 text-md'>
           SUBSCRIPTIONS
@@ -49,7 +49,7 @@ const Subscriptions = () => {
         <p className='ml-4 text-md'>Show 135 more </p>
       </div>
       <hr className='sm:hidden lg:flex' />
-    </div>
+    </>
   );
 };
 

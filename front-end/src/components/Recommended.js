@@ -6,16 +6,19 @@ import moment from "moment";
 const Recommended = ({ info }) => {
   let views = info?.video?.statistics?.viewCount;
 
+  const videoDuration = info?.video?.contentDetails?.duration;
+
   return (
-    <div className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[21%] m-[.5%]'>
-      <div className='w-[100%] h-[65%] m-2'>
+    <div className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'>
+      <div className='w-[100%] h-[95.5%] m-2'>
         <img
           className='w-full h-full object-cover rounded-lg'
           src={info?.video?.snippet?.thumbnails?.high?.url}
           alt=''
         />
+        {/* <p className='relative'>Time</p> */}
       </div>
-      <div className='w-[100%] h-[40%] flex ml-2'>
+      <div className='w-[100%] flex ml-2'>
         <div className='w-9 h-8 border-black border 2 rounded-full'>
           <img
             className='w-full h-full rounded-full'
@@ -27,10 +30,10 @@ const Recommended = ({ info }) => {
           <h1 className='text-md font-semibold line-clamp-2 leading-tight ...'>
             {info?.video?.snippet?.title}
           </h1>
-          <div className='flex flex-col py-1'>
+          <div className='flex flex-col py-[1%]'>
             <p className='text-sm'>{info?.video?.snippet?.channelTitle}</p>
             <div className='flex items-center h-6 gap-1 pb-[4%]'>
-              <p className=' text-xm'>{numeral(views).format("a")} views</p>
+              <p className=' text-sm'>{numeral(views).format("a")} views</p>
               <span className='pb-1'> &#183;</span>
               <p className='text-xm'>
                 {moment
