@@ -20,7 +20,7 @@ const Header = () => {
           alt='youtube'
         />
       </div>
-      <div className='md:hidden md2:flex flex-shrink w-[47%] lg:w-[33%]'>
+      <div className='md:hidden md2:flex flex-shrink w-[47%] lg:w-[37%]'>
         <input
           className='p-2 w-20 h-10 flex-1 border-2 border-gray-300 rounded-full'
           placeholder='Search'

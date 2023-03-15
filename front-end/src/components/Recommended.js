@@ -12,7 +12,7 @@ const Recommended = ({ info }) => {
     <div className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'>
       <div className='w-[100%] h-[95.5%] m-2'>
         <img
-          className='w-full h-full object-cover rounded-lg'
+          className='w-full h-full object-cover rounded-xl'
           src={info?.video?.snippet?.thumbnails?.high?.url}
           alt=''
         />
