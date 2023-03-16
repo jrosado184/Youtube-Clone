@@ -44,10 +44,12 @@ export const getChannels = (channelId, dupChannelIds) => {
   return (dispatch) => {
     axios
       .get(
-        `https://youtube.googleapis.com/youtube/v3/channels?part=snippet&part=status&maxResults=50&id=${channelId}&key=${process.env.REACT_APP_API_KEY}`
+        `https://youtube.googleapis.com/youtube/v3/channels?part=snippet&part=statistics&part=status&maxResults=50&id=${channelId}&key=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
-        getAllDupChannelIcons(res, dupChannelIds);
+        if (dupChannelIds !== undefined) {
+          getAllDupChannelIcons(res, dupChannelIds);
+        }
         dispatch(fetchChannels(res.data.items));
       })
       .catch((err) => {

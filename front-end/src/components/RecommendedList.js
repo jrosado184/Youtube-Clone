@@ -3,6 +3,7 @@ import Recommended from "./Recommended";
 import { getChannels, getVideos } from "../actions";
 import { connect } from "react-redux";
 import Categories from "./Categories";
+import SideMenu from "./side-menu/SideMenu";
 
 const RecommendedList = ({ dispatch, videos, channels }) => {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,8 @@ const RecommendedList = ({ dispatch, videos, channels }) => {
 
   return (
     <>
+      <SideMenu />
+      <Categories />
       <div className='w-[90%] h-2 flex flex-wrap justify-center my-32 sm:ml-[6%] md:ml-[12%] md3:ml-[8%] md4:ml-[8%] lg:ml-[13%] gap-y-20'>
         {channels.length
           ? videos_and_channels?.map((info, index) => (

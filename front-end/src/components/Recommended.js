@@ -2,15 +2,21 @@ import React from "react";
 import { connect } from "react-redux";
 import numeral from "numeral";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const Recommended = ({ info }) => {
   let views = info?.video?.statistics?.viewCount;
 
   const videoDuration = info?.video?.contentDetails?.duration;
 
+  const nav = useNavigate();
+
   return (
-    <div className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'>
-      <div className='w-[100%] h-[95.5%] m-2'>
+    <div
+      onClick={() => nav(`/${info.video.id}`)}
+      className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'
+    >
+      <div className='w-[100%] h-[95.5%] m-2 '>
         <img
           className='w-full h-full object-cover rounded-xl'
           src={info?.video?.snippet?.thumbnails?.high?.url}
@@ -27,7 +33,7 @@ const Recommended = ({ info }) => {
           />
         </div>
         <div className='w-full h-8 ml-2'>
-          <h1 className='text-md font-semibold line-clamp-2 leading-tight ...'>
+          <h1 className='text-md font-semibold line-clamp-2 leading-tight ... cursor-pointer'>
             {info?.video?.snippet?.title}
           </h1>
           <div className='flex flex-col py-[1%]'>

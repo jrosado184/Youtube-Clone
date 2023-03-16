@@ -8,4 +8,5 @@ export const getAllDupChannelIcons = (res, duplicateChannel) => {
   res.data.items.sort((a, b) =>
     a?.snippet?.title.localeCompare(b?.snippet?.title)
   );
+  console.log(res);
 };

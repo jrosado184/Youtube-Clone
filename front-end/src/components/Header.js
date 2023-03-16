@@ -15,7 +15,7 @@ const Header = () => {
       <div className='display: flex items-center'>
         <img className='sm:hidden lg:flex w-5 ml-7' src={menu} alt='menu' />
         <img
-          className='sm:ml-6 w-24 object-contain lg:w-20 ml-12'
+          className='sm:ml-6 w-24 object-contain lg:w-24 ml-12'
           src={youtube}
           alt='youtube'
         />
