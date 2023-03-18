@@ -20,6 +20,12 @@ export const fetchChannels = (channel) => {
   return { type: FETCH_CHANNELS, payload: channel };
 };
 
+export const FETCH_VIDEOS_AND_CHANNELS = "FETCH_VIDEOS_AND_CHANNELS";
+
+export const fetchVideosAndChannels = (videosAndChannels) => {
+  return { type: FETCH_VIDEOS_AND_CHANNELS, payload: videosAndChannels };
+};
+
 export const getVideos = () => {
   return (dispatch) => {
     dispatch(loading);

@@ -1,66 +1,82 @@
 import React from "react";
-import premium from "../../assets/youtube-premium.svg";
-import movies from "../../assets/m&s.svg";
-import gaming from "../../assets/gaming.svg";
-import live from "../../assets/live.svg";
-import fashion from "../../assets/fashion.svg";
-import learning from "../../assets/learning.svg";
-import sports from "../../assets/sports.svg";
-import settings from "../../assets/settings.svg";
-import flag from "../../assets/flag.svg";
-import help from "../../assets/help.svg";
-import feedback from "../../assets/feedback.svg";
+import premium from "../../assets/youtube.svg";
+import { ReactComponent as Trending } from "../../assets/m&s.svg";
+import { ReactComponent as Gaming } from "../../assets/gaming.svg";
+import { ReactComponent as Music } from "../../assets/live.svg";
+import { ReactComponent as News } from "../../assets/fashion.svg";
+import { ReactComponent as Learning } from "../../assets/learning.svg";
+import { ReactComponent as Sports } from "../../assets/sports.svg";
+import { ReactComponent as Settings } from "../../assets/settings.svg";
+import { ReactComponent as Flag } from "../../assets/flag.svg";
+import { ReactComponent as Help } from "../../assets/help.svg";
+import { ReactComponent as Feedback } from "../../assets/feedback.svg";
 
 const MoreYT = () => {
   return (
     <div className='pb-6'>
-      <h1 className='text-gray-500 font-semibold ml-4 sm:hidden lg:flex my-4 text-md'>
-        MORE FROM YOUTUBE
+      <h1 className='text-neutral-500 font-semibold ml-4 sm:hidden lg:flex my-4 text-md dark:text-neutral-100'>
+        EXPLORE
       </h1>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={premium} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Youtube Premium</p>
+        <Trending className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Trending
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={movies} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Movies & Shows</p>
+        <Gaming className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Gaming
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={gaming} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Gaming</p>
+        <Music className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Music
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={live} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Live</p>
+        <News className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          News
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={fashion} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Fashion & Beauty</p>
+        <Learning className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Learning
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={learning} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Learning</p>
+        <Sports className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Sports
+        </p>
+      </div>
+      <hr className='ml-6 sm:hidden lg:flex border-neutral-500/25' />
+      <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
+        <Settings className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Settings
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={sports} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Sports</p>
-      </div>
-      <hr className='sm:hidden lg:flex' />
-      <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={settings} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Settings</p>
+        <Flag className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Report History
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={flag} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Report History</p>
+        <Help className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Help
+        </p>
       </div>
       <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={help} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Help</p>
-      </div>
-      <div className='md:hidden lg:flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={feedback} alt='' />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Feedback</p>
+        <Feedback className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Feedback
+        </p>
       </div>
     </div>
   );

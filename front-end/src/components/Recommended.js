@@ -16,7 +16,7 @@ const Recommended = ({ info }) => {
       onClick={() => nav(`/${info.video.id}`)}
       className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'
     >
-      <div className='w-[100%] h-[95.5%] m-2 '>
+      <div className='w-[100%] h-[95.5%] m-2 cursor-pointer '>
         <img
           className='w-full h-full object-cover rounded-xl'
           src={info?.video?.snippet?.thumbnails?.high?.url}
@@ -33,15 +33,19 @@ const Recommended = ({ info }) => {
           />
         </div>
         <div className='w-full h-8 ml-2'>
-          <h1 className='text-md font-semibold line-clamp-2 leading-tight ... cursor-pointer'>
+          <h1 className='text-md font-semibold line-clamp-2 leading-tight ... cursor-pointer dark:text-neutral-100'>
             {info?.video?.snippet?.title}
           </h1>
-          <div className='flex flex-col py-[1%]'>
-            <p className='text-sm'>{info?.video?.snippet?.channelTitle}</p>
-            <div className='flex items-center h-6 gap-1 pb-[4%]'>
-              <p className=' text-sm'>{numeral(views).format("a")} views</p>
-              <span className='pb-1'> &#183;</span>
-              <p className='text-xm'>
+          <div className='flex flex-col py-[2%]'>
+            <p className='text-sm dark:text-neutral-400'>
+              {info?.video?.snippet?.channelTitle}
+            </p>
+            <div className='flex items-center h-6 gap-1 pb-[3%]'>
+              <p className=' text-sm dark:text-neutral-400'>
+                {numeral(views).format("a")} views
+              </p>
+              <span className='pb-1 dark:text-neutral-400'> &#183;</span>
+              <p className='text-xm dark:text-neutral-400'>
                 {moment
                   .utc(`${info?.video?.snippet?.publishedAt}`)
                   .local()

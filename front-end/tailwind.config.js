@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
@@ -10,7 +11,7 @@ module.exports = {
       lg: "1359px",
     },
     fontSize: {
-      xm: "0.70em",
+      xm: "0.75em",
       sm: "0.85em",
       md: "0.95em",
     },

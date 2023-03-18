@@ -6,12 +6,12 @@ import Categories from "./Categories";
 import SideMenu from "./side-menu/SideMenu";
 
 const RecommendedList = ({ dispatch, videos, channels }) => {
-  const [loading, setLoading] = useState(true);
-
+  const videos_and_channels = [];
   const channelId = [],
     dupChannelIdMap = {},
-    dupChannelIds = [],
-    videos_and_channels = [];
+    dupChannelIds = [];
+
+  const [loading, setLoading] = useState(true);
 
   for (let i = 0; i < videos.length; i++) {
     channelId.push(videos[i]?.snippet?.channelId);

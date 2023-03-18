@@ -1,65 +1,77 @@
 import React from "react";
-import home from "../../assets/home.svg";
-import explore from "../../assets/explore.png";
-import subscriptions from "../../assets/subscriptions.svg";
-import library from "../../assets/library.svg";
-import history from "../../assets/history.png";
-import videos from "../../assets/videos.svg";
-import clock from "../../assets/clock.svg";
-import liked from "../../assets/liked.svg";
+import { ReactComponent as Home } from "../../assets/home.svg";
+import { ReactComponent as Shorts } from "../../assets/shorts.svg";
+import { ReactComponent as Subscriptions } from "../../assets/subscriptions.svg";
+import { ReactComponent as Library } from "../../assets/library.svg";
+import { ReactComponent as History } from "../../assets/history.svg";
+import { ReactComponent as Videos } from "../../assets/videos.svg";
+import { ReactComponent as Clock } from "../../assets/clock.svg";
+import { ReactComponent as Liked } from "../../assets/liked.svg";
 
 const User = () => {
   return (
     <>
-      <div className=' sm:bg-white lg:bg-gray-200 flex justify-start items-center bg-gray-200 h-10 my-3 rounded-lg'>
-        <img className='w-5 ml-6' src={home} />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Home</p>
+      <div className=' sm:bg-white lg:bg-neutral-200/50 lg:hover:bg-neutral-200/100 lg:dark:bg-neutral-600/25 flex justify-start items-center bg-gray-200 h-10 my-3 rounded-lg hover:bg-gray-200/[15%] dark:hover:bg-neutral-300/[20%] cursor-pointer'>
+        <Home className='w-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          Home
+        </p>
       </div>
-      <div className='md:my-6 flex lg:my-1 flex items-center h-10 hover:bg-gray-100'>
-        <img
-          className='w-6 h-6 rounded-3xl border-2 border-gray-700 ml-6'
-          src={explore}
-          alt=''
-        />
-        <p className='sm:hidden lg:inline ml-5 text-md'>Explore</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Shorts className='w-5 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Shorts
+        </p>
       </div>
       {/*SUBSCRIPTIONS ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={subscriptions} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Subscriptions</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Subscriptions className='w-5 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-5 text-md dark:text-neutral-100'>
+          Subscriptions
+        </p>
       </div>
       {/*LINE*/}
-      <div className='display: flex justify-start flex-col mr-2 my-4'>
-        <hr className='sm:hidden lg:flex' />
+      <div className='flex justify-start flex-col mr-2 my-4'>
+        <hr className='sm:hidden lg:flex ml-4 border border-neutral-500/25' />
       </div>
       {/*LIBRARY ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center'>
-        <img className='w-6 ml-6' src={library} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Library</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Library className='w-5 ml-6 text-neutral-100 dark:text-neutral-100/[90%]' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          Library
+        </p>
       </div>
       {/*HISTORY ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center sm:hidden lg:flex'>
-        <img className='w-6 h-6 ml-6' src={history} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>History</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <History className='w-5 h-6 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          History
+        </p>
       </div>
       {/*YOUR VIDEOS ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center sm:hidden lg:flex'>
-        <img className='w-6 ml-6' src={videos} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Your videos</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Videos className='w-5 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          Your videos
+        </p>
       </div>
       {/*WATCH LATER ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center sm:hidden lg:flex'>
-        <img className='w-6 ml-6' src={clock} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Watch later</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Clock className='w-5 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          Watch later
+        </p>
       </div>
       {/*LIKED VIDEOS ICON DIV*/}
-      <div className='display: flex justify-start my-1 hover:bg-gray-100 h-10 items-center sm:hidden lg:flex'>
-        <img className='w-6 ml-6' src={liked} alt='' />
-        <p className='sm:hidden lg:inline ml-6 text-md'>Liked videos</p>
+      <div className='md:my-6 flex lg:my-1 items-center h-10 lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg cursor-pointer'>
+        <Liked className='w-5 ml-6 dark:text-neutral-100' />
+        <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
+          Liked videos
+        </p>
       </div>
       {/*LINE*/}
       <div>
-        <hr className='sm:hidden lg:flex' />
+        <hr className='ml-6 sm:hidden lg:flex border border-neutral-500/25' />
       </div>
     </>
   );
