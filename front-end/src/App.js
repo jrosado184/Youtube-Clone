@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import RecommendedList from "./components/RecommendedList";
-import WatchVideos from "./components/WatchVideos";
+import Header from "./components/main/Header";
+import RecommendedList from "./components/main/RecommendedList";
+import WatchVideos from "./components/videos/WatchVideos";
 import { useEffect, useState } from "react";
+import SearchResults from "./components/videos/SearchResults";
 
 const App = () => {
   const [darkTheme, setDarkTheme] = useState(true);
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<RecommendedList />} />
         <Route path='/:id' element={<WatchVideos />} />
+        <Route path='/results/:id' element={<SearchResults />} />
       </Routes>
     </div>
   );

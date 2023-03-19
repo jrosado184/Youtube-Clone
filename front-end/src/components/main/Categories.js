@@ -1,9 +1,9 @@
 import React from "react";
-import right from "../assets/right.svg";
+import right from "../../assets/right.svg";
 
 const Categories = () => {
   return (
-    <div className='lg:ml-[13%] fixed top-16 pb-4 sm:ml-12'>
+    <div className='lg:ml-[10%] fixed top-16 pb-4 sm:ml-12'>
       <div className=' w-[90%] bg-white ml-12 h-100 dark:bg-neutral-900'>
         {/*TOP LINE*/}
         <div className='w-[100%] display: flex justify-end'>

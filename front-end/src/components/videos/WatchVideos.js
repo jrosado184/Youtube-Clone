@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import SideVideos from "./SideVideos";
-import Sidescrollbar from "./Sidescrollbar";
 import ReactPlayer from "react-player/youtube";
-import { ReactComponent as Thumbsup } from "./../assets/thumbs-up.svg";
-import { ReactComponent as Thumbsdown } from "../assets/Thumbsdown.svg";
-import { ReactComponent as Share } from "../assets/Share.svg";
-import { ReactComponent as Download } from "./../assets/download.svg";
-import { ReactComponent as Dots } from "../assets/Dots.svg";
+import { ReactComponent as Thumbsup } from "./../../assets/thumbs-up.svg";
+import { ReactComponent as Thumbsdown } from "../../assets/Thumbsdown.svg";
+import { ReactComponent as Share } from "../../assets/Share.svg";
+import { ReactComponent as Download } from "./../../assets/download.svg";
+import { ReactComponent as Dots } from "../../assets/Dots.svg";
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
-import { getChannels, getVideos } from "../actions/index.js";
+import { getChannels, getVideos } from "../../actions/index.js";
 import numeral from "numeral";
 import moment from "moment";
+import Comments from "./Comments";
 
 const WatchVideos = ({ videos, channels, dispatch }) => {
   const { id } = useParams();
@@ -19,6 +19,9 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
   const [loading, setLoading] = useState(true);
 
   const videoInfo = videos.filter((video) => video.id === id);
+
+  const [likedVideo, setLikedVideo] = useState(false);
+  const [unlikedVideo, setunlikedVideo] = useState(false);
 
   useEffect(() => {
     dispatch(getVideos());
@@ -30,6 +33,16 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
       setLoading(false);
     }, 500);
   }, [loading]);
+
+  const unLikeVideo = () => {
+    setLikedVideo(false);
+    setunlikedVideo(!unlikedVideo);
+  };
+
+  const likeVideo = () => {
+    setunlikedVideo(false);
+    setLikedVideo(!likedVideo);
+  };
 
   return (
     <>
@@ -46,7 +59,7 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
                 url={`https://youtube.com/watch?v=${id}`}
               />
             </div>
-            <h1 className='text-[1.4rem] font-medium py-1 dark:text-neutral-100'>
+            <h1 className='text-[1.2rem] font-medium py-2 dark:text-neutral-100'>
               {videoInfo[0]?.snippet?.title}
             </h1>
             <div className='w-[100%] flex justify-between items-center pr-36'>
@@ -77,12 +90,20 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
               </div>
               <div className='w-[32%] flex gap-1'>
                 <div className='border-2 border-black w-32 pl-4 pr-4 h-9 rounded-full flex justify-evenly items-center gap-2 dark:bg-neutral-700/50'>
-                  <Thumbsup className='dark:text-neutral-100 w-5 h-5' />
+                  <Thumbsup
+                    onClick={() => likeVideo()}
+                    fill={likedVideo ? "white" : null}
+                    className={`dark:text-neutral-100 w-5 h-5 cursor-pointer select:fill-white`}
+                  />
                   <p className='text-sm dark:text-neutral-100'>
                     {numeral(videoInfo[0]?.statistics?.likeCount).format("a")}
                   </p>
                   <hr className='h-6 border border-gray-400 dark:text-neutral-100 dark:border-gray-600' />
-                  <Thumbsdown className='dark:text-neutral-100 w-5 h-5' />
+                  <Thumbsdown
+                    fill={unlikedVideo ? "white" : null}
+                    onClick={() => unLikeVideo()}
+                    className='dark:text-neutral-100 w-5 h-5 cursor-pointer'
+                  />
                 </div>
                 <button className='border-2 border-black w-28 h-9 rounded-full text-sm flex items-center gap-1 pl-4 pr-4 justify-center dark:bg-neutral-700/50'>
                   <Share className='dark:text-neutral-100 w-5 h-5' />{" "}
@@ -121,6 +142,7 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
                 {videoInfo[0]?.snippet?.description}
               </p>
             </div>
+            <Comments />
           </div>
           <SideVideos />
         </div>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Recommended from "./Recommended";
-import { getChannels, getVideos } from "../actions";
+import { getChannels, getVideos } from "../../actions";
 import { connect } from "react-redux";
 import Categories from "./Categories";
-import SideMenu from "./side-menu/SideMenu";
+import SideMenu from "../side-menu/SideMenu";
 
 const RecommendedList = ({ dispatch, videos, channels }) => {
   const videos_and_channels = [];

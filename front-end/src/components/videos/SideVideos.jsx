@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidescrollbar from './Sidescrollbar';
 import { connect } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import numeral from 'numeral';
 import moment from 'moment';
+import axios from 'axios';
 
 const SideVideos = ({ videos, channels }) => {
 
@@ -12,7 +13,8 @@ const SideVideos = ({ videos, channels }) => {
     const nav = useNavigate()
 
     const videosExceptCurrent = videos?.filter((video) => video?.id !== id)
-    
+
+
   return (
     <div className='w-[30%] py-20 flex flex-col gap-2'>
       <Sidescrollbar/>
