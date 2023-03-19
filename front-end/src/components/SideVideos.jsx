@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import Sidescrollbar from './Sidescrollbar';
 import { connect } from 'react-redux';
-import { videos_and_channels } from './RecommendedList';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import numeral from 'numeral';
 import moment from 'moment';
 
@@ -9,19 +9,22 @@ const SideVideos = ({ videos, channels }) => {
 
     const { id } = useParams()
 
+    const nav = useNavigate()
+
     const videosExceptCurrent = videos?.filter((video) => video?.id !== id)
     
   return (
-    <div className='w-[40%] py-20 flex flex-col gap-1'>
-       {videosExceptCurrent?.map((video) => (
-        <>
-        <div className='flex'>
-         <div className='w-[55%] h-[6.6rem] border border-black ml-4 rounded-lg cursor-pointer'>
-            <img className='w-full h-[100%] object-cover' src={video?.snippet?.thumbnails?.high?.url} alt=""/>
+    <div className='w-[30%] py-20 flex flex-col gap-2'>
+      <Sidescrollbar/>
+       {videosExceptCurrent?.map((video, index) => (
+        <div key={index}>
+        <div onClick={() => nav(`/${video.id}`)} className='flex'>
+         <div className='w-[45%] h-[6rem] ml-4 rounded-lg cursor-pointer'>
+            <img className='w-full h-[100%] object-cover rounded-lg' src={video?.snippet?.thumbnails?.high?.url} alt=""/>
         </div>
-        <div className='ml-1 w-[60%]'>
-          <h1 className='text-md font-semibold line-clamp-2 leading-tight ...'>{video?.snippet?.title}</h1>
-          <p className='text-xm line-clamp-2 leading-tight ... py-1'>{video?.snippet?.channelTitle}</p>
+        <div className='ml-2 w-[60%] cursor-pointer'>
+          <h1 className='text-md font-semibold line-clamp-2 leading-tight ... dark:text-neutral-100'>{video?.snippet?.title}</h1>
+          <p className='text-xm line-clamp-2 leading-tight ... py-[2%] dark:text-neutral-400'>{video?.snippet?.channelTitle}</p>
           <div className='flex items-center h-6 gap-1 pb-[3%]'>
               <p className=' text-sm dark:text-neutral-400'>
                 {numeral(video.statistics.viewCount).format("a")} views
@@ -43,7 +46,7 @@ const SideVideos = ({ videos, channels }) => {
             </div>
         </div>
         </div>
-        </>
+        </div>
        ))}
       </div>
   )

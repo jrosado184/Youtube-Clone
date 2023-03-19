@@ -6,14 +6,14 @@ import WatchVideos from "./components/WatchVideos";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
 
   useEffect(() => {
     document.body.style.backgroundColor = darkTheme ? "rgb(23 23 23)" : "white";
   }, [darkTheme]);
 
   return (
-    <div className={darkTheme && "dark"}>
+    <div className={darkTheme ? "dark" : null}>
       <Header />
       <Routes>
         <Route path='/' element={<RecommendedList />} />

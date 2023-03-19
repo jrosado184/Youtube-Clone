@@ -28,7 +28,7 @@ const Subscriptions = () => {
         <img className='w-6 ml-2 rounded-full' src={sonny} alt='' />
         <p className='ml-4 text-md dark:text-neutral-100'>Sonny Sangha</p>
       </div>
-      <div className='md:hidden lg:flex items-center py-3 cursor-pointer lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg'>
+      <div className='md:hidden lg:flex items-center p-3 cursor-pointer lg:hover:bg-neutral-200/50 dark:hover:bg-neutral-600/25 rounded-lg'>
         <img className='w-6 ml-2 rounded-full' src={biaheza} alt='' />
         <p className='ml-4 text-md dark:text-neutral-100'>Biaheza</p>
       </div>

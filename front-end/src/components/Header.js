@@ -38,7 +38,7 @@ const Header = () => {
       </div>
       <div className='display: flex items-center'>
         <Camera className='dark:text-neutral-100 md2:flex w-6 mr-6 sm:hidden' />
-        <Bell className='dark:text-neutral-100 lg:w-6 h-7 mr-2' />
+        <Bell className='dark:text-neutral-100 lg:w-6 h-7 mr-6' />
         {/* <img className='md:w-6 mr-2 md2:hidden' src={searchIcon} /> */}
         <div>
           <img
