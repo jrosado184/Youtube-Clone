@@ -10,8 +10,8 @@ const Comments = () => {
     }
 
     return (
-    <div className='h-[5vh] dark:text-neutral-100'>
-        <div className='py-6'>Comments</div>
+    <div className='h-[5vh] dark:text-neutral-100 '>
+        <div className='py-6 desktop:ml-7'>Comments</div>
         <div className='flex h-14 justify-center items-center'>
         <img className='w-11 h-11 rounded-full bg-neutral-100' src={profieImage} alt=""/>
         <input onChange={addNewComment} name="newComment" value={newComment} placeholder='Add a comment...' className='w-[90%] ml-4 dark:bg-neutral-900 border-b border-neutral-700 outline-none focus:border-neutral-100 focus: transition focus:ease-linear placeholder:dark:text-neutral-400/75 pb-1'/>

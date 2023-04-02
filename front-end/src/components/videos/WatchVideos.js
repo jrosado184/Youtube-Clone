@@ -48,8 +48,8 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
     <>
       {channels.length && (
         <div className='flex'>
-          <div className='w-[100%] h-[100vh] flex flex-col my-20 ml-6'>
-            <div className='w-[100%] h-[70.2%]'>
+          <div className='w-[100%] h-[100vh] flex flex-col my-20 ml-6 desktop:ml-[4%]'>
+            <div className='w-[100%] h-[70.2%] desktop:w-[80%]'>
               <ReactPlayer
                 controls={true}
                 playing={true}
@@ -62,7 +62,7 @@ const WatchVideos = ({ videos, channels, dispatch }) => {
             <h1 className='text-[1.2rem] font-medium py-2 dark:text-neutral-100'>
               {videoInfo[0]?.snippet?.title}
             </h1>
-            <div className='w-[100%] flex justify-between items-center pr-36'>
+            <div className='w-[100%] flex justify-between items-center pr-36 desktop:w-[80%]'>
               <div className='w-[100%] flex justify-start items-start'>
                 <div className='flex items-center w-[100%]'>
                   <div className='w-11 h-11 border-black border 2 rounded-full'>

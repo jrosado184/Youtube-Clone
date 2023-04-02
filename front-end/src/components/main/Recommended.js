@@ -14,7 +14,7 @@ const Recommended = ({ info }) => {
   return (
     <div
       onClick={() => nav(`/${info.video.id}`)}
-      className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-[15rem] lg:w-[27.777%] m-[.5%]'
+      className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-[15rem] md4:w-[27.777%] desktop:w-[21%] m-[.5%]'
     >
       <div className='w-[100%] h-[12.656rem] m-2 cursor-pointer '>
         <img

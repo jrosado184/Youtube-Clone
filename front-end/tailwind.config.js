@@ -8,7 +8,9 @@ module.exports = {
       md2: "700px",
       md3: "820px",
       md4: "1000px",
+      macbook: "1440px",
       lg: "1359px",
+      desktop:"1920px"
     },
     fontSize: {
       xm: "0.75em",
