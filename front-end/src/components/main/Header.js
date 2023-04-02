@@ -8,7 +8,6 @@ import me from "../../assets/me.png";
 import { ReactComponent as SearchIcon } from "../../assets/searchIcon.svg";
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import { getSearchedChannels } from "../../actions";
 
 const Header = ({ dispatch, searchedVideos }) => {
   const nav = useNavigate();
@@ -20,7 +19,7 @@ const Header = ({ dispatch, searchedVideos }) => {
   };
 
   return (
-    <div className='w-full h-12 py-8 display: flex items-center justify-between fixed top-0 bg-white dark:bg-black'>
+    <div className='w-full h-12 py-8 display: flex items-center justify-between fixed top-0 bg-white dark:bg-neutral-900'>
       <div className='display: flex items-center'>
         <Menu className='sm:hidden lg:flex w-5 ml-7 dark:text-neutral-100' />
         <Youtube

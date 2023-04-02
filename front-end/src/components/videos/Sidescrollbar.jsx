@@ -15,8 +15,6 @@ function Sidescrollbar({ videos, channels }) {
         <div className='border border-black rounded-lg flex w-auto pl-3 pr-3 h-8 justify-center items-center text-sm cursor-pointer dark:bg-neutral-700/[65%] dark:text-neutral-100'><p className='w-auto whitespace-nowrap'>Live</p></div>
         <div className='border border-black rounded-lg flex w-auto pl-3 pr-3 h-8 justify-center items-center text-sm cursor-pointer dark:bg-neutral-700/[65%] dark:text-neutral-100'><p className='w-auto whitespace-nowrap'>Recently Uploaded</p></div>
         <div className='border border-black rounded-lg flex w-auto pl-3 pr-3 h-8 justify-center items-center text-sm cursor-pointer  dark:bg-neutral-700/[65%] dark:text-neutral-100'><p className='w-auto whitespace-nowrap'></p>Watched</div>
-        <div className='border border-black rounded-lg flex w-auto pl-3 pr-3 h-8 justify-center items-center text-sm cursor-pointer dark:bg-neutral-700/[65%] dark:text-neutral-100'>hello</div>
-        <div className='border border-black rounded-lg flex w-auto pl-3 pr-3 h-8 justify-center items-center text-sm cursor-pointer  dark:bg-neutral-700/[65%] dark:text-neutral-100'><p className='w-auto whitespace-nowrap'>hello</p></div>
        
     </div>
   )

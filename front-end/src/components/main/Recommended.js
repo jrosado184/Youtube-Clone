@@ -14,9 +14,9 @@ const Recommended = ({ info }) => {
   return (
     <div
       onClick={() => nav(`/${info.video.id}`)}
-      className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-52 lg:w-[27.5%] m-[.5%]'
+      className='sm:w-[32.2%] md:w-[90%] md4:w-[32%] md2:w-[46%] h-[15rem] lg:w-[27.777%] m-[.5%]'
     >
-      <div className='w-[100%] h-[95.5%] m-2 cursor-pointer '>
+      <div className='w-[100%] h-[12.656rem] m-2 cursor-pointer '>
         <img
           className='w-full h-full object-cover rounded-xl'
           src={info?.video?.snippet?.thumbnails?.high?.url}
@@ -24,7 +24,7 @@ const Recommended = ({ info }) => {
         />
         {/* <p className='relative'>Time</p> */}
       </div>
-      <div className='w-[100%] flex ml-2'>
+      <div className='w-[100%] flex ml-2 my-3'>
         <div className='w-9 h-8 border-black border 2 rounded-full'>
           <img
             className='w-full h-full rounded-full'

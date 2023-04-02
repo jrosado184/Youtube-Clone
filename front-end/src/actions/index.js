@@ -69,6 +69,9 @@ export const getSearchedChannels = (input) => {
         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${input}&key=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
+        res.data.items.sort((a, b) =>
+          a?.snippet?.channelTitle.localeCompare(b?.snippet?.channelTitle)
+        );
         dispatch(fetchSearchResults(res.data.items));
       })
       .catch((err) => {
