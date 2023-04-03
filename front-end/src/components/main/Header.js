@@ -15,7 +15,9 @@ const Header = ({ dispatch, searchedVideos }) => {
   const [searchResults, setSearchResults] = useState("");
 
   const handleSearch = () => {
-    nav(`/results/${searchResults}`);
+    if(searchResults) {
+      nav(`/results/${searchResults}`);
+    }
   };
 
   return (
@@ -27,17 +29,16 @@ const Header = ({ dispatch, searchedVideos }) => {
           className='w-32 dark:text-neutral-100 cursor-pointer'
         />
       </div>
-      <div className='md:hidden md2:flex flex-shrink w-[40%] lg:w-[44%]'>
+      <div className='md:hidden md2:flex flex-shrink w-[40%] lg:w-[44%] desktop:w-[34%]'>
         <input
           onChange={(e) => setSearchResults(e.target.value)}
-          className='pl-3 h-10 flex-1 border-2 border-gray-300 rounded-l-full dark:bg-black dark:border-neutral-800 placeholder:dark:text-neutral-500 dark:focus:border-blue-900/75 outline-0 dark:text-neutral-100'
+          className='pl-3 p-5 h-10 flex-1 border-2 border-gray-300 rounded-l-full dark:bg-neutral-900 dark:border-neutral-800 placeholder:dark:text-neutral-500 dark:focus:border-blue-900/75 outline-0 dark:text-neutral-100'
           placeholder='Search'
           name='searchResults'
           value={searchResults}
         />
-        <button className='flex justify-center items-center h-10 w-14 rounded-r-full dark:bg-neutral-800 dark:border dark:border-neutral-800'>
+        <button onClick={handleSearch} className='flex justify-center items-center h-11 w-14 rounded-r-full dark:bg-neutral-800 dark:border dark:border-neutral-800'>
           <SearchIcon
-            onClick={handleSearch}
             className='dark:text-neutral-100 w-5 h-5'
           />
         </button>

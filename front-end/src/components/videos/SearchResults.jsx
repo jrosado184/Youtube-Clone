@@ -20,8 +20,6 @@ const SearchResults = ({ searchedVideos, dispatch, channels }) => {
 
     const { id } = useParams()
 
-    const searchResult = id.split("%20")
-
     for (let i = 0; i < searchedVideos?.length; i++) {
       channelIds.push(searchedVideos[i]?.snippet?.channelId);
         videos_and_channels.push({
@@ -38,9 +36,9 @@ const SearchResults = ({ searchedVideos, dispatch, channels }) => {
     
 
     useEffect(() => {
-    dispatch(getSearchedChannels(searchResult));
+    dispatch(getSearchedChannels(id.split("%20")));
         searchedVideos.length && dispatch(getChannels(channelIds, dupChannelIds))
-    }, [id])
+    }, [id, loading])
 
     useEffect(() => {
         setTimeout(() => {
@@ -48,13 +46,14 @@ const SearchResults = ({ searchedVideos, dispatch, channels }) => {
         }, 1000)
     }, [loading])
 
+
   return (
     <>
     <SideMenu/>
     <div className='w-[100%] h-[100vh] flex flex-wrap justify-center my-32 ml-[5%]'>
     <hr className='w-[70%] border-none h-[1px] bg-neutral-600/50 mb-4'/>
          {channels.length && videos_and_channels.map((video, index) => (
-              <div className='w-[80%] h-[27vh] ml-[10%] py-1 flex flex-col cursor-pointer '>
+              <div key={index} className='w-[80%] h-[27vh] ml-[10%] py-1 flex flex-col cursor-pointer desktop:h-[22vh]'>
             <div className='flex'>
             <img
                 className='object-cover rounded-xl h-[12rem] w-[22rem]'

@@ -11,7 +11,7 @@ import { ReactComponent as Liked } from "../../assets/liked.svg";
 const User = () => {
   return (
     <>
-      <div className=' sm:bg-white lg:bg-neutral-200/50 lg:hover:bg-neutral-200/100 lg:dark:bg-neutral-600/25 flex justify-start items-center bg-gray-200 h-10 my-3 rounded-lg hover:bg-gray-200/[15%] dark:hover:bg-neutral-300/[20%] cursor-pointer'>
+      <div className=' sm:bg-none lg:bg-neutral-200/50 lg:hover:bg-neutral-200/100 lg:dark:bg-neutral-600/25 flex justify-start items-center bg-gray-200 h-10 my-3 rounded-lg hover:bg-gray-200/[15%] dark:hover:bg-neutral-300/[20%] cursor-pointer'>
         <Home className='w-6 ml-6 dark:text-neutral-100' />
         <p className='sm:hidden lg:inline ml-6 text-md dark:text-neutral-100'>
           Home
